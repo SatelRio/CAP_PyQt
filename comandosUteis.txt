@@ -1,0 +1,13 @@
+.\venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pyuic5 cap.ui -o cap.py
+python -m venv venv
+
+
+.\venv\Scripts\Activate.ps1
+pip freeze > requirements.txt
+pip install -r requirements.txt
+git push origin --delete <branch>
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+python -m pip install --upgrade pip
+
